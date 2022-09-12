@@ -1,4 +1,5 @@
 
+import Collections from './components/Collections';
 import Header from './components/Header';
 import Intro from './components/Intro';
 import Navbar from './components/Navbar';
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Navbar />
       <Intro />
+      <Collections />
     </div>
   );
 }
