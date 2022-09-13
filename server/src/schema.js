@@ -3,8 +3,8 @@ const { gql } = require("apollo-server");
 const typeDefs = gql`
 
     type Query {
-        yemekler: [Yemekler]
-        secimler: [Secimler]
+        yemekler(id: ID!): [Yemekler]
+        secimler(id: ID!): [Secimler]
     }
 
     #PizzaTarifleri,EnginarTarifleri
@@ -19,8 +19,14 @@ const typeDefs = gql`
     type Yemekler {
         id: ID
         title: String
-        description: String
-        photo:String!
+        cookingTime: String
+        peopleFor: String
+        cooker: String
+        cookerAvatar: String
+        cookerJob: String
+        date: String
+        image: String
+
     }
 `
 
