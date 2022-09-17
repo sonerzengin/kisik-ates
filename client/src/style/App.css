@@ -21,6 +21,18 @@
   font-family: SF Pro Display Medium;
 }
 
+.error {
+  height: 50vh;
+  font-size: 36px;
+  text-align: center;
+}
+
+.loading {
+  height: 50vh;
+  font-size: 36px;
+  text-align: center;
+}
+
 .container {
   padding-right: 7.5rem !important;
   padding-left: 7.5rem !important;
@@ -197,14 +209,14 @@ form .searchIcon {
   color: #ff9f00;
   padding: 12px 30px;
   font-family: SF Pro Display Heavy;
-  background: #fff3e5;
+  background: transparent;
   border: 1px solid #ff9f00;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.5s ease;
 }
 .collections button:hover {
-  background: #f4ddb7;
+  background: #fff3e5;
 }
 
 .collectioncard {
@@ -270,6 +282,46 @@ form .searchIcon {
   }
 }
 
+.collections__chiefs {
+  text-align: center;
+  padding-bottom: 5em;
+  padding-top: 5em;
+  background-color: #f7f7f7;
+}
+.collections__chiefs__topTitle {
+  display: block;
+  color: #ff9f00;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  line-height: 1.25rem;
+}
+.collections__chiefs__title {
+  font-size: 2rem;
+  font-family: SF Pro Display Heavy;
+  padding: 0.2rem;
+  margin-bottom: 1.5em;
+}
+@media screen and (max-width: 992px) {
+  .collections__chiefs__title {
+    font-size: 1.7rem;
+  }
+}
+.collections__chiefs button {
+  margin-top: 3.5em;
+  color: #ff9f00;
+  padding: 12px 30px;
+  font-family: SF Pro Display Heavy;
+  background: transparent;
+  border: 1px solid #ff9f00;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.collections__chiefs button:hover {
+  background: #fff3e5;
+}
+
 .chiefs {
   display: grid;
   grid-template-columns: repeat(3, 0.5fr);
@@ -294,6 +346,7 @@ form .searchIcon {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   transition: 0.5s ease;
   cursor: pointer;
+  background-color: #fff;
 }
 .chiefs__card:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -321,4 +374,84 @@ form .searchIcon {
   color: #969696;
   font-size: 14px;
   letter-spacing: 1.2px;
+}
+
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr);
+  grid-template-rows: repeat(2, 2fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+@media screen and (max-width: 992px) {
+  .recipes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768.99px) {
+  .recipes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.recipes__recipes {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: 0.5s ease;
+}
+.recipes__recipes:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.recipes__head {
+  display: flex;
+  padding: 20px;
+  height: 40px;
+}
+.recipes__head--img {
+  border-radius: 100%;
+  width: auto;
+}
+.recipes__head--info {
+  text-align: left;
+  padding-left: 12px;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.recipes__head--info--name {
+  font-family: SF Pro Display Heavy;
+}
+.recipes__head--info--name img {
+  width: 7%;
+  padding-left: 5px;
+}
+.recipes__head--info--job {
+  color: #969696;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+}
+.recipes__img {
+  width: 100%;
+  height: auto;
+}
+.recipes__main {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  height: 100px;
+  padding: 20px 30px;
+  justify-content: space-between;
+}
+.recipes__main--title {
+  font-family: SF Pro Display SemiBold;
+  font-size: 1.7em;
+}
+.recipes__main--info {
+  display: flex;
+  justify-content: space-around;
+}
+.recipes__main--info--cookingTime img {
+  width: 20%;
+}
+.recipes__main--info--forPeople img {
+  width: 25%;
 }/*# sourceMappingURL=App.css.map */

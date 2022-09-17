@@ -13,6 +13,7 @@ function App() {
       <Intro />
       <Collections />
       <Chiefs />
+      <Recipes />
     </div>
   );
 }

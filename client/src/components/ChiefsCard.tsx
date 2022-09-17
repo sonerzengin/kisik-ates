@@ -1,3 +1,4 @@
+import { Button } from '@chakra-ui/react';
 import React from 'react';
 import verified from '../assets/verified.png';
 type Iprobs = {
@@ -14,6 +15,7 @@ const ChiefsCard: React.FC<Iprobs> = ({ yemekler }) => {
             <div className="chiefs__card--info--name">{yemek.cooker}<img alt='' src={verified} /></div>
             <div className="chiefs__card--info--job">{yemek.cookerJob}</div>
           </div>
+          
         </div>
       ))}
     </div>

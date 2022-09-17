@@ -28,6 +28,16 @@ $primarycolor: #ff9f00;
   font-family: $primaryFont400;
   
 }
+.error{
+  height: 50vh;
+  font-size: 36px;
+  text-align: center;
+}
+.loading{
+  height: 50vh;
+  font-size: 36px;
+  text-align: center;
+}
 .container{
   padding-right: 7.5rem !important;
   padding-left: 7.5rem !important;
@@ -199,13 +209,13 @@ form {
     color: $primarycolor;
     padding: 12px 30px;
     font-family: $primaryFont700;
-    background: #fff3e5;
+    background: transparent;
     border:1px solid $primarycolor;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.5s ease;
     &:hover{
-      background: #f4ddb7;
+      background: #fff3e5;
     }
   }
 }
@@ -275,9 +285,47 @@ form {
 }
 
 //SEFLERLE ILETISIME GEC
-
+.collections__chiefs{
+  text-align: center;
+  padding-bottom: 5em;
+  padding-top: 5em;
+  background-color: #f7f7f7;
+  
+  &__topTitle{
+    display: block;
+    color: $primarycolor;
+    font-size: .875rem;
+    font-weight: 700;
+    letter-spacing: .0625rem;
+    line-height: 1.25rem;
+    
+  }
+  &__title{
+    font-size: 2rem;
+    font-family: $primaryFont700;
+    padding: 0.2rem;
+    margin-bottom: 1.5em;
+    @media screen and (max-width: 992px) {
+      font-size: 1.7rem;
+    }
+  }
+  button{
+    margin-top: 3.5em;
+    color: $primarycolor;
+    padding: 12px 30px;
+    font-family: $primaryFont700;
+    background: transparent;
+    border:1px solid $primarycolor;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    &:hover{
+      background: #fff3e5;
+    }
+  }
+}
 .chiefs{
-  display: grid;
+    display: grid;
     grid-template-columns: repeat(3, 0.5fr);
     grid-template-rows: repeat(2, 2fr);
     grid-column-gap: 30px;
@@ -301,6 +349,7 @@ form {
       box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
       transition: 0.5s ease;
       cursor: pointer;
+      background-color: #fff;
       &:hover{
         box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
       }
@@ -331,4 +380,92 @@ form {
       }
     }
     
+}
+
+//Yemek Tarifleri
+
+.recipes{
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+    grid-template-rows: repeat(2, 2fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    
+    
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media screen and (max-width: 768.99px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__recipes{
+      
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      transition: 0.5s ease;
+      &:hover{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+    }
+    &__head{
+      display: flex;
+      padding: 20px;
+      height: 40px;
+      &--img{
+        border-radius: 100%;
+        width: auto;
+      }
+      &--info{
+        text-align: left;
+        padding-left: 12px;
+        display: flex;
+        align-items: left;
+        flex-direction: column;
+        justify-content: space-evenly;
+        &--name{
+          font-family: $primaryFont700;
+          img{
+            width: 7%;
+            padding-left: 5px;
+          }
+        }
+        &--job{
+          color: $textcolor;
+          font-size: 14px;
+          letter-spacing: 1.2px;
+        }
+      }
+    }
+    &__img{
+      width: 100%;
+      height: auto;
+    }
+    &__main{
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      height: 100px;
+      padding: 20px 30px;
+      justify-content: space-between;
+      &--title{
+        font-family: $primaryFont500;
+        font-size: 1.7em;
+      }
+      &--info{
+        display: flex;
+        justify-content: space-around;
+        &--cookingTime {
+          img{
+            width: 20%;
+          }
+        }
+        &--forPeople{
+          img{
+            width: 25%;
+            
+          }
+        }
+      }
+    }
 }
