@@ -1,5 +1,5 @@
 
-import Collections, { Recipes } from './components/Collections';
+import Collections, { Chiefs, Recipes } from './components/Collections';
 import Header from './components/Header';
 import Intro from './components/Intro';
 import Navbar from './components/Navbar';
@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <Intro />
       <Collections />
-      
+      <Chiefs />
     </div>
   );
 }

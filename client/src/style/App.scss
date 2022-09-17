@@ -173,6 +173,8 @@ form {
 }
 .collections{
   text-align: center;
+  padding-bottom: 5em;
+  padding-top: 5em;
   
   &__topTitle{
     display: block;
@@ -187,48 +189,146 @@ form {
     font-size: 2rem;
     font-family: $primaryFont700;
     padding: 0.2rem;
+    margin-bottom: 1.5em;
+    @media screen and (max-width: 992px) {
+      font-size: 1.7rem;
+    }
+  }
+  button{
+    margin-top: 3.5em;
+    color: $primarycolor;
+    padding: 12px 30px;
+    font-family: $primaryFont700;
+    background: #fff3e5;
+    border:1px solid $primarycolor;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    &:hover{
+      background: #f4ddb7;
+    }
   }
 }
+
+//KISIK ATES'TEN OZEL SECIMLER
 
 .collectioncard {
   
     display: grid;
     grid-template-columns: repeat(3, 0.5fr);
     grid-template-rows: repeat(2, 2fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
     
     @media screen and (max-width: 768.99px) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
     }
 
     &__card{
       display: flex;
       flex-direction: column;
-      
-      justify-content: space-around;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      justify-content: space-between;
       overflow: hidden;
       height: 300px;
       cursor: pointer;
       text-align: left;
+      padding-bottom: 20px;
+      transition: 0.5s ease;
+      &:hover{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+      @media screen and (max-width: 992px) {
+        height: 250px;
+      }
       &--title{
         color: $primarycolor;
         font-family: $primaryFont700;
-        padding: 0 10px;
+        padding: 0 25px;
+        @media screen and (max-width: 992px) {
+          padding: 0 10px;
+        }
       }
       &--description{
         height: 40px;
-        padding: 0 10px;
+        padding: 0 25px;
         overflow:hidden;
-        display:inline-block;
-        text-overflow: ellipsis;
         
-        width: 350px;
+        text-overflow: ellipsis;
+        white-space: pre-line;
+        font-size: 1rem;
+        
         color: $textcolor;
         line-height: 1.2rem;
+        @media screen and (max-width: 992px) {
+          padding: 0 10px;
+        }
         
       }
     }
     
+    
+}
+
+//SEFLERLE ILETISIME GEC
+
+.chiefs{
+  display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+    grid-template-rows: repeat(2, 2fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    
+    
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media screen and (max-width: 768.99px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    
+    &__card{
+      display: flex;
+      padding: 20px;
+      height: 80px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      transition: 0.5s ease;
+      cursor: pointer;
+      &:hover{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+
+      &--img{
+        border-radius: 100%;
+        width: auto;
+      }
+      &--info{
+        text-align: left;
+        padding-left: 12px;
+        display: flex;
+        align-items: left;
+        flex-direction: column;
+        justify-content: space-evenly;
+        &--name{
+          font-family: $primaryFont700;
+          img{
+            width: 7%;
+            padding-left: 5px;
+          }
+        }
+        &--job{
+          color: $textcolor;
+          font-size: 14px;
+          letter-spacing: 1.2px;
+        }
+      }
+    }
     
 }

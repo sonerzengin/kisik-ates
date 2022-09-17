@@ -93,6 +93,50 @@ const yemekler = [
         cookerJob: "Zennup 1844 - Mutfak Koordinatörü",
         date: "31.07.2022",
         image: "https://cdn.kisikates.com.tr/image-cache/cache/recipe_main_image_medium/https---cdn.kisikates.com.tr/recipe-media/a1cc4ee1e4ce8fc5f123fadadb4f5e633325e1a4.jpeg"
+    },
+    {
+        id: 1003,
+        title: "Pikan Cevizli Dondurma",
+        cookingTime: "50 Dakika",
+        peopleFor: "2-4 Kişilik",
+        cooker: "Gülçin Kaya",
+        cookerAvatar: "https://cdn.kisikates.com.tr/image-cache/cache/user_avatar_small/https---cdn.kisikates.com.tr/user-avatar/82b88386440823fb3ae4e527eb9fd73585488f8f.png",
+        cookerJob: "Pınar - Demo Şefi",
+        date: "04.07.2022",
+        image: "https://cdn.kisikates.com.tr/image-cache/cache/recipe_main_image_medium/https---cdn.kisikates.com.tr/recipe-media/849ec86e5ce033081103531d61f5abe869660c41.jpeg"
+    },
+    {
+        id: 1004,
+        title: "Zeytinyağlı Bezelyeli Enginar",
+        cookingTime: "45 Dakika",
+        peopleFor: "2 Kişilik",
+        cooker: "Eyüp Kemal Sevinç",
+        cookerAvatar: "https://cdn.kisikates.com.tr/image-cache/cache/user_avatar_small/https---cdn.kisikates.com.tr/user-avatar/7e558c6830de2253d0c8225e6a226fe1cc18e27c.png",
+        cookerJob: "EKS Mutfak - Kurucu Şefi",
+        date: "01.06.2022",
+        image: "https://cdn.kisikates.com.tr/image-cache/cache/recipe_main_image_medium/https---cdn.kisikates.com.tr/recipe-media/fcfa75677af6848ba2861a9501d1c833a1b824b9.jpeg"
+    },
+    {
+        id: 1005,
+        title: "Fırında Kuzu Pirzola",
+        cookingTime: "65 Dakika",
+        peopleFor: "4-6 Kişilik",
+        cooker: "Fehmi Samancı",
+        cookerAvatar: "https://cdn.kisikates.com.tr/image-cache/cache/user_avatar_small/https---cdn.kisikates.com.tr/user-avatar/5b0c6d0d2715504b1bc565ceeb36d287ad6cd90e.png",
+        cookerJob: "Eğitmen / Danışman Şef",
+        date: "12.05.2022",
+        image: "https://cdn.kisikates.com.tr/image-cache/cache/recipe_main_image_medium/https---cdn.kisikates.com.tr/recipe-media/3498110d5546bb2f181771e81477e6925c402b69.jpeg"
+    },
+    {
+        id: 1006,
+        title: "Güveçte Etli Bamya",
+        cookingTime: "60 Dakika",
+        peopleFor: "4-6 Kişilik",
+        cooker: "Murat Yıldız",
+        cookerAvatar: "https://cdn.kisikates.com.tr/image-cache/cache/user_avatar_small/https---cdn.kisikates.com.tr/user-avatar/b89180cd5414d253ebcfd20b722833055512c8b7.jpeg",
+        cookerJob: "Mövenpick Hotel - Executive Chef",
+        date: "23.07.2020",
+        image: "https://cdn.kisikates.com.tr/image-cache/cache/recipe_main_image_medium/https---cdn.kisikates.com.tr/recipe-media/ac9251025ca3ef44b258279585fb1fc668687329.jpeg"
     }
 ]
 

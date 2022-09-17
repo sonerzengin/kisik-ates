@@ -2,7 +2,9 @@ import React from 'react';
 import { gql, useQuery } from '@apollo/client';
 import CollectionCard from './CollectionCard';
 import RecipesCard from './RecipesCard';
-import { Url } from 'url';
+
+import { Button } from '@chakra-ui/react';
+import ChiefsCard from './ChiefsCard';
 
 interface Secimler {
   id: number;
@@ -65,10 +67,13 @@ function Collections() {
           <div className='collections__topTitle'>KOLEKSİYONLAR</div>
           <div className='collections__title'>Kısık Ateş’ten Özel Seçimler</div>
           <CollectionCard data={data}  />
+          <Button>Tüm Koleksiyonları Görüntüle</Button>
         </div>;
 }
 
 export default Collections;
+
+// RECIPES EXPORT
 
 export function Recipes() {
   const { loading, error, data } = useQuery<YemeklerData>(GET_COLLECTIONS, { pollInterval: 500 });
@@ -84,4 +89,22 @@ export function Recipes() {
           <RecipesCard yemekler={data}  />
         </div>;
 }
+
+//CHIEFS EXPORT
+
+export function Chiefs() {
+  const { loading, error, data } = useQuery<YemeklerData>(GET_COLLECTIONS, { pollInterval: 500 });
+
+  if (loading) return null;
+  if (error) return null;
+
+ 
+
+  return <div className='collections'>
+          <div className='collections__topTitle'>UZMANLAR</div>
+          <div className='collections__title'>Şefler ile İletişime Geç</div>
+          <ChiefsCard yemekler={data}  />
+        </div>;
+}
+
 

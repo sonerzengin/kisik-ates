@@ -170,6 +170,8 @@ form .searchIcon {
 
 .collections {
   text-align: center;
+  padding-bottom: 5em;
+  padding-top: 5em;
 }
 .collections__topTitle {
   display: block;
@@ -183,41 +185,140 @@ form .searchIcon {
   font-size: 2rem;
   font-family: SF Pro Display Heavy;
   padding: 0.2rem;
+  margin-bottom: 1.5em;
+}
+@media screen and (max-width: 992px) {
+  .collections__title {
+    font-size: 1.7rem;
+  }
+}
+.collections button {
+  margin-top: 3.5em;
+  color: #ff9f00;
+  padding: 12px 30px;
+  font-family: SF Pro Display Heavy;
+  background: #fff3e5;
+  border: 1px solid #ff9f00;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.collections button:hover {
+  background: #f4ddb7;
 }
 
 .collectioncard {
   display: grid;
   grid-template-columns: repeat(3, 0.5fr);
   grid-template-rows: repeat(2, 2fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+@media screen and (max-width: 992px) {
+  .collectioncard {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media screen and (max-width: 768.99px) {
   .collectioncard {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .collectioncard__card {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  justify-content: space-between;
   overflow: hidden;
   height: 300px;
   cursor: pointer;
   text-align: left;
+  padding-bottom: 20px;
+  transition: 0.5s ease;
+}
+.collectioncard__card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+@media screen and (max-width: 992px) {
+  .collectioncard__card {
+    height: 250px;
+  }
 }
 .collectioncard__card--title {
   color: #ff9f00;
   font-family: SF Pro Display Heavy;
-  padding: 0 10px;
+  padding: 0 25px;
+}
+@media screen and (max-width: 992px) {
+  .collectioncard__card--title {
+    padding: 0 10px;
+  }
 }
 .collectioncard__card--description {
   height: 40px;
-  padding: 0 10px;
+  padding: 0 25px;
   overflow: hidden;
-  display: inline-block;
   text-overflow: ellipsis;
-  width: 350px;
+  white-space: pre-line;
+  font-size: 1rem;
   color: #969696;
   line-height: 1.2rem;
+}
+@media screen and (max-width: 992px) {
+  .collectioncard__card--description {
+    padding: 0 10px;
+  }
+}
+
+.chiefs {
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr);
+  grid-template-rows: repeat(2, 2fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+@media screen and (max-width: 992px) {
+  .chiefs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768.99px) {
+  .chiefs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.chiefs__card {
+  display: flex;
+  padding: 20px;
+  height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.chiefs__card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.chiefs__card--img {
+  border-radius: 100%;
+  width: auto;
+}
+.chiefs__card--info {
+  text-align: left;
+  padding-left: 12px;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.chiefs__card--info--name {
+  font-family: SF Pro Display Heavy;
+}
+.chiefs__card--info--name img {
+  width: 7%;
+  padding-left: 5px;
+}
+.chiefs__card--info--job {
+  color: #969696;
+  font-size: 14px;
+  letter-spacing: 1.2px;
 }/*# sourceMappingURL=App.css.map */
