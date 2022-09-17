@@ -19,12 +19,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: SF Pro Display Medium;
-  height: 1000px;
 }
 
 .container {
-  padding-right: 7.5rem;
-  padding-left: 7.5rem;
+  padding-right: 7.5rem !important;
+  padding-left: 7.5rem !important;
 }
 
 .sticky {
@@ -147,6 +146,7 @@ form .searchIcon {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin-bottom: 200px;
 }
 .intro__title {
   padding-top: 90px;
@@ -166,4 +166,58 @@ form .searchIcon {
   margin-bottom: -131px;
   padding-left: 40px;
   padding-right: 40px;
+}
+
+.collections {
+  text-align: center;
+}
+.collections__topTitle {
+  display: block;
+  color: #ff9f00;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  line-height: 1.25rem;
+}
+.collections__title {
+  font-size: 2rem;
+  font-family: SF Pro Display Heavy;
+  padding: 0.2rem;
+}
+
+.collectioncard {
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr);
+  grid-template-rows: repeat(2, 2fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+@media screen and (max-width: 768.99px) {
+  .collectioncard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.collectioncard__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+  height: 300px;
+  cursor: pointer;
+  text-align: left;
+}
+.collectioncard__card--title {
+  color: #ff9f00;
+  font-family: SF Pro Display Heavy;
+  padding: 0 10px;
+}
+.collectioncard__card--description {
+  height: 40px;
+  padding: 0 10px;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  width: 350px;
+  color: #969696;
+  line-height: 1.2rem;
 }/*# sourceMappingURL=App.css.map */

@@ -26,11 +26,11 @@ $primarycolor: #ff9f00;
   padding: 0;
   box-sizing: border-box;
   font-family: $primaryFont400;
-  height: 1000px;
+  
 }
 .container{
-  padding-right: 7.5rem;
-  padding-left: 7.5rem;
+  padding-right: 7.5rem !important;
+  padding-left: 7.5rem !important;
 }
 .sticky {
   position: fixed;
@@ -149,13 +149,14 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin-bottom: 200px;
   
   &__title{
     padding-top: 90px;
     font-family: $primaryFont500;
     font-size: 3.375rem;
     span{
-      color: #ff9f00;
+      color: $primarycolor;
     }
   }
   &__subtitle{
@@ -169,4 +170,65 @@ form {
     padding-left: 40px;
     padding-right:40px ;
   }
+}
+.collections{
+  text-align: center;
+  
+  &__topTitle{
+    display: block;
+    color: $primarycolor;
+    font-size: .875rem;
+    font-weight: 700;
+    letter-spacing: .0625rem;
+    line-height: 1.25rem;
+    
+  }
+  &__title{
+    font-size: 2rem;
+    font-family: $primaryFont700;
+    padding: 0.2rem;
+  }
+}
+
+.collectioncard {
+  
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+    grid-template-rows: repeat(2, 2fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    
+    @media screen and (max-width: 768.99px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__card{
+      display: flex;
+      flex-direction: column;
+      
+      justify-content: space-around;
+      overflow: hidden;
+      height: 300px;
+      cursor: pointer;
+      text-align: left;
+      &--title{
+        color: $primarycolor;
+        font-family: $primaryFont700;
+        padding: 0 10px;
+      }
+      &--description{
+        height: 40px;
+        padding: 0 10px;
+        overflow:hidden;
+        display:inline-block;
+        text-overflow: ellipsis;
+        
+        width: 350px;
+        color: $textcolor;
+        line-height: 1.2rem;
+        
+      }
+    }
+    
+    
 }
