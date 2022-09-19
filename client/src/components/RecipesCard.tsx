@@ -25,9 +25,23 @@ const RecipesCard: React.FC<Iprobs> = ({ yemekler }) => {
           <div className='recipes__main'>
             <div className="recipes__main--title"><b>{yemek.title}</b></div>
             <div className="recipes__main--info">
-              <div className="recipes__main--info--cookingTime"><img src={clock} alt="" />{yemek.cookingTime}</div>
-              <div className="recipes__main--info--forPeople"><img src={tray} alt="" />{yemek.peopleFor}</div>
+              <div className="recipes__main--info--cookingTime"><img src={clock} alt="" /><div>{yemek.cookingTime}</div></div>
+              <div className="recipes__main--info--forPeople"><img src={tray} alt="" /><div>{yemek.peopleFor}</div></div>
             </div>
+          </div>
+          <hr/>
+          <div className="recipes__footer">
+            <div className="recipes__footer--comment">
+              <div>
+              <i className="fa-regular fa-heart"></i>
+              <span>38</span>
+              </div>
+              <div>
+              <i className="fa-regular fa-comment-dots"></i>
+              <span>5</span>
+              </div>
+            </div>
+            <div className="recipes__footer--views">3B Görüntülenme</div>
           </div>
         </div>
       ))}

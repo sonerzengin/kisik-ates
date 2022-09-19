@@ -87,6 +87,8 @@ export function Recipes() {
           <div className='collections__topTitle'>Tarifler</div>
           <div className='collections__title'>Yemek Tariflerini Keşfet ve Paylaş</div>
           <RecipesCard yemekler={data}  />
+          <Button>Tüm Tarifler</Button>
+          <hr className='collections__hr' />
         </div>;
 }
 
