@@ -14,37 +14,43 @@
   font-family: SF Pro Display Medium;
   src: url(./font/SFProDisplay-Medium.ttf);
 }
-$primaryFontregular:  SF Pro Regular;
+$primaryFontregular: SF Pro Regular;
 $primaryFont500: SF Pro Display SemiBold;
 $primaryFont400: SF Pro Display Medium;
 $primaryFont700: SF Pro Display Heavy;
 $textcolor: #969696;
 $primarycolor: #ff9f00;
 
-body{
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  a{
+  a {
     text-decoration: none;
   }
 }
+hr {
+  height: 1px !important;
+  background-color: #555 !important;
+  border: none !important;
+}
+li {
+  list-style-type: none;
+}
 .App {
- 
   font-family: $primaryFont400;
-  
 }
-.error{
+.error {
   height: 50vh;
   font-size: 36px;
   text-align: center;
 }
-.loading{
+.loading {
   height: 50vh;
   font-size: 36px;
   text-align: center;
 }
-.container{
+.container {
   padding-right: 7.5rem !important;
   padding-left: 7.5rem !important;
 }
@@ -114,50 +120,44 @@ form {
     }
   }
 }
-.navbar{
-    height: 75px;
-    background: $primarycolor;
-    
+.navbar {
+  height: 75px;
+  background: $primarycolor;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #ffe2b3;
+  font-size: 1.1rem;
+
+  .container {
     display: flex;
-    align-items: center;
-    width: 100%;
-    color: #ffe2b3;
-    font-size: 1.1rem;
-    
-    
-    .container{
+    justify-content: space-between;
+
+    div {
       display: flex;
-      justify-content: space-between;
-      
-      
-      
-        div {
-            
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding:0 62px;
-            i{
-              padding-right: 15px;
-            }
-          }
-        div:first-child{
-          padding-left: 20px;
-        }
-        div:nth-child(5){
-            border: none;
-            padding-right: 10px ;
-        }
-        div:hover{
-          transition:all 0.4s ease-in;
-            color: #fff;
-            cursor: pointer;
-        }
-    
+      align-items: center;
+      justify-content: center;
+      padding: 0 62px;
+      i {
+        padding-right: 15px;
+      }
     }
-    
+    div:first-child {
+      padding-left: 20px;
+    }
+    div:nth-child(5) {
+      border: none;
+      padding-right: 10px;
+    }
+    div:hover {
+      transition: all 0.4s ease-in;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
 }
-.intro{
+.intro {
   height: 600px;
   background-image: url(../assets/background.svg);
   background-color: rgba(218, 216, 216, 0.15);
@@ -166,42 +166,41 @@ form {
   flex-direction: column;
   justify-content: space-evenly;
   margin-bottom: 200px;
-  
-  &__title{
+
+  &__title {
     padding-top: 90px;
     font-family: $primaryFont500;
     font-size: 3.375rem;
-    span{
+    span {
       color: $primarycolor;
     }
   }
-  &__subtitle{
+  &__subtitle {
     padding: 0 22.5rem;
     font-size: 1.2em;
-    font-family:$primaryFontregular;
+    font-family: $primaryFontregular;
     line-height: 28px;
   }
-  &__img{
+  &__img {
     margin-bottom: -131px;
     padding-left: 40px;
-    padding-right:40px ;
+    padding-right: 40px;
   }
 }
-.collections{
+.collections {
   text-align: center;
   padding-bottom: 5em;
   padding-top: 5em;
-  
-  &__topTitle{
+
+  &__topTitle {
     display: block;
     color: $primarycolor;
-    font-size: .875rem;
+    font-size: 0.875rem;
     font-weight: 700;
-    letter-spacing: .0625rem;
+    letter-spacing: 0.0625rem;
     line-height: 1.25rem;
-    
   }
-  &__title{
+  &__title {
     font-size: 2rem;
     font-family: $primaryFont700;
     padding: 0.2rem;
@@ -210,107 +209,101 @@ form {
       font-size: 1.7rem;
     }
   }
-  button{
+  button {
     margin-top: 3.5em;
     color: $primarycolor;
     padding: 12px 30px;
     font-family: $primaryFont700;
     background: transparent;
-    border:1px solid $primarycolor;
+    border: 1px solid $primarycolor;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.5s ease;
-    &:hover{
+    &:hover {
       background: #fff3e5;
     }
   }
-   &__hr{
+  &__hr {
     margin-top: 6rem;
-    
   }
 }
 
 //KISIK ATES'TEN OZEL SECIMLER
 
 .collectioncard {
-  
-    display: grid;
-    grid-template-columns: repeat(3, 0.5fr);
-    grid-template-rows: repeat(2, 2fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr);
+  grid-template-rows: repeat(2, 2fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
 
+  @media screen and (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 768.99px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 300px;
+    cursor: pointer;
+    text-align: left;
+    padding-bottom: 20px;
+    transition: 0.5s ease;
+    &:hover {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
     @media screen and (max-width: 992px) {
-      grid-template-columns: repeat(2, 1fr);
+      height: 250px;
     }
-    
-    @media screen and (max-width: 768.99px) {
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    &__card{
-      display: flex;
-      flex-direction: column;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-      justify-content: space-between;
-      overflow: hidden;
-      height: 300px;
-      cursor: pointer;
-      text-align: left;
-      padding-bottom: 20px;
-      transition: 0.5s ease;
-      &:hover{
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-      }
+    &--title {
+      color: $primarycolor;
+      font-family: $primaryFont700;
+      padding: 0 25px;
       @media screen and (max-width: 992px) {
-        height: 250px;
-      }
-      &--title{
-        color: $primarycolor;
-        font-family: $primaryFont700;
-        padding: 0 25px;
-        @media screen and (max-width: 992px) {
-          padding: 0 10px;
-        }
-      }
-      &--description{
-        height: 40px;
-        padding: 0 25px;
-        overflow:hidden;
-        
-        text-overflow: ellipsis;
-        white-space: pre-line;
-        font-size: 1rem;
-        
-        color: $textcolor;
-        line-height: 1.2rem;
-        @media screen and (max-width: 992px) {
-          padding: 0 10px;
-        }
-        
+        padding: 0 10px;
       }
     }
-    
-    
+    &--description {
+      height: 40px;
+      padding: 0 25px;
+      overflow: hidden;
+
+      text-overflow: ellipsis;
+      white-space: pre-line;
+      font-size: 1rem;
+
+      color: $textcolor;
+      line-height: 1.2rem;
+      @media screen and (max-width: 992px) {
+        padding: 0 10px;
+      }
+    }
+  }
 }
 
 //SEFLERLE ILETISIME GEC
-.collections__chiefs{
+.collections__chiefs {
   text-align: center;
   padding-bottom: 5em;
   padding-top: 5em;
   background-color: #f7f7f7;
-  
-  &__topTitle{
+
+  &__topTitle {
     display: block;
     color: $primarycolor;
-    font-size: .875rem;
+    font-size: 0.875rem;
     font-weight: 700;
-    letter-spacing: .0625rem;
+    letter-spacing: 0.0625rem;
     line-height: 1.25rem;
-    
   }
-  &__title{
+  &__title {
     font-size: 2rem;
     font-family: $primaryFont700;
     padding: 0.2rem;
@@ -319,185 +312,177 @@ form {
       font-size: 1.7rem;
     }
   }
-  button{
+  button {
     margin-top: 3.5em;
     color: $primarycolor;
     padding: 12px 30px;
     font-family: $primaryFont700;
     background: transparent;
-    border:1px solid $primarycolor;
+    border: 1px solid $primarycolor;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.5s ease;
-    &:hover{
+    &:hover {
       background: #fff3e5;
     }
   }
 }
-.chiefs{
-    display: grid;
-    grid-template-columns: repeat(3, 0.5fr);
-    grid-template-rows: repeat(2, 2fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-    
-    
+.chiefs {
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr);
+  grid-template-rows: repeat(2, 2fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
 
-    @media screen and (max-width: 992px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    
-    @media screen and (max-width: 768.99px) {
-      grid-template-columns: repeat(1, 1fr);
+  @media screen and (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 768.99px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &__card {
+    display: flex;
+    padding: 20px;
+    height: 80px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    background-color: #fff;
+    &:hover {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     }
 
-    
-    &__card{
+    &--img {
+      border-radius: 100%;
+      width: auto;
+    }
+    &--info {
+      text-align: left;
+      padding-left: 12px;
       display: flex;
-      padding: 20px;
-      height: 80px;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-      transition: 0.5s ease;
-      cursor: pointer;
-      background-color: #fff;
-      &:hover{
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-      }
-
-      &--img{
-        border-radius: 100%;
-        width: auto;
-      }
-      &--info{
-        text-align: left;
-        padding-left: 12px;
-        display: flex;
-        align-items: left;
-        flex-direction: column;
-        justify-content: space-evenly;
-        &--name{
-          font-family: $primaryFont700;
-          img{
-            width: 7%;
-            padding-left: 5px;
-          }
+      align-items: left;
+      flex-direction: column;
+      justify-content: space-evenly;
+      &--name {
+        font-family: $primaryFont700;
+        img {
+          width: 7%;
+          padding-left: 5px;
         }
-        &--job{
-          color: $textcolor;
-          font-size: 14px;
-          letter-spacing: 1.2px;
-        }
+      }
+      &--job {
+        color: $textcolor;
+        font-size: 14px;
+        letter-spacing: 1.2px;
       }
     }
-    
+  }
 }
 
 //Yemek Tarifleri
 
-.recipes{
-    display: grid;
-    grid-template-columns: repeat(3, 0.5fr);
-    grid-template-rows: repeat(2, 2fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-    
-    
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr);
+  grid-template-rows: repeat(2, 2fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
 
-    @media screen and (max-width: 992px) {
-      grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 768.99px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  &__recipes {
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: 0.5s ease;
+    &:hover {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     }
-    
-    @media screen and (max-width: 768.99px) {
-      grid-template-columns: repeat(1, 1fr);
+  }
+  &__head {
+    display: flex;
+    padding: 20px;
+    height: 40px;
+    &--img {
+      border-radius: 100%;
+      width: auto;
     }
-    &__recipes{
-      border-radius: 4px;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-      transition: 0.5s ease;
-      &:hover{
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-      }
-    }
-    &__head{
-      display: flex;
-      padding: 20px;
-      height: 40px;
-      &--img{
-        border-radius: 100%;
-        width: auto;
-      }
-      &--info{
-        text-align: left;
-        padding-left: 12px;
-        display: flex;
-        align-items: left;
-        flex-direction: column;
-        justify-content: space-evenly;
-        &--name{
-          font-family: $primaryFont700;
-          img{
-            width: 7%;
-            padding-left: 5px;
-          }
-        }
-        &--job{
-          color: $textcolor;
-          font-size: 14px;
-          letter-spacing: 0.8px !important;
-        }
-      }
-    }
-    &__img{
-      width: 100%;
-      height: auto;
-    }
-    &__main{
-      display: flex;
-      flex-direction: column;
+    &--info {
       text-align: left;
-      height: 80px;
-      padding: 20px 30px;
-      justify-content: space-between;
-      &--title{
-        font-family: $primaryFont500;
-        font-size: 1.4em;
-      }
-      &--info{
-        display: flex;
-        justify-content:flex-start;
-        align-items: center;
-        color: $textcolor;
-        font-size: 0.9rem;
-        &--cookingTime {
-          display: flex;
-          justify-content:space-around;
-          align-items: center;
-          padding-right: 10px;
-          img{
-            width: 12%;
-            padding: 7px;
-            background-color:#ffe7cc ;
-            border-radius: 50%;
-            
-          }
+      padding-left: 12px;
+      display: flex;
+      align-items: left;
+      flex-direction: column;
+      justify-content: space-evenly;
+      &--name {
+        font-family: $primaryFont700;
+        img {
+          width: 7%;
+          padding-left: 5px;
         }
-        &--forPeople{
-          display: flex;
-          justify-content:space-evenly;
-          align-items: center;
-          img{
-            width: 15%;
-            padding: 5px;
-            background-color:#ffe7cc ;
-            border-radius: 50%;
-          }
+      }
+      &--job {
+        color: $textcolor;
+        font-size: 14px;
+        letter-spacing: 0.8px !important;
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: 80px;
+    padding: 20px 30px;
+    justify-content: space-between;
+    &--title {
+      font-family: $primaryFont500;
+      font-size: 1.4em;
+    }
+    &--info {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      color: $textcolor;
+      font-size: 0.9rem;
+      &--cookingTime {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-right: 10px;
+        img {
+          width: 12%;
+          padding: 7px;
+          background-color: #ffe7cc;
+          border-radius: 50%;
+        }
+      }
+      &--forPeople {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        img {
+          width: 15%;
+          padding: 5px;
+          background-color: #ffe7cc;
+          border-radius: 50%;
         }
       }
     }
-    
+  }
 }
 
-.recipes__footer{
+.recipes__footer {
   height: 40px;
   font-size: 0.8rem;
   font-family: $primaryFont500;
@@ -506,7 +491,7 @@ form {
   align-items: center;
   justify-content: space-between;
   padding: 0 1.2rem;
-  &--comment{
+  &--comment {
     display: flex;
     width: 30%;
     justify-content: space-between;
@@ -521,25 +506,25 @@ form {
   grid-template-columns: 2fr 4fr;
   padding: 6.25rem 0;
   column-gap: 10px;
-  &--info{
+  &--info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    
-    h1{
+
+    h1 {
       margin-top: 0;
       padding-top: 0;
       color: #262626;
       letter-spacing: 0.1rem;
     }
-    p{
+    p {
       color: $textcolor;
       font-size: 1.125rem;
       line-height: 1.5;
       letter-spacing: 0.05rem;
     }
-    a{
+    a {
       background-color: #ff9f00;
       border-color: #ff9f00;
       border-radius: 0.25rem;
@@ -547,10 +532,160 @@ form {
       font-family: $primaryFont500;
       padding: 0.8rem 2.5rem;
       transition: 0.5s ease;
-      &:hover{
+      &:hover {
         background-color: #bd7502;
       }
     }
   }
-  
+}
+.mobil {
+  margin: 8.25rem 0;
+  display: flex;
+  align-items: center;
+  background-color: $primarycolor;
+  height: 29rem;
+  padding: 0 5rem;
+}
+.mobilplatform {
+  * {
+    padding-bottom: 1rem;
+  }
+
+  &__logo {
+    margin-left: -4rem;
+    padding-bottom: 0;
+  }
+
+  &__title {
+    margin-top: -2.5rem;
+    font-size: 2.75rem;
+    font-family: $primaryFont700;
+    color: #fff;
+  }
+  &__text {
+    color: #f2f2f2;
+    letter-spacing: -0.025rem;
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    * {
+      padding: 5px;
+      width: 30%;
+      cursor: pointer;
+    }
+  }
+}
+
+.bulten {
+  background-color: $primarycolor;
+  color: #fff;
+  .bultencontent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.25rem 0;
+  }
+  &__left {
+    width: 35rem;
+    &--title {
+      font-size: 2rem;
+      font-family: $primaryFont500;
+      margin-bottom: 0.5em;
+    }
+    &--text {
+      letter-spacing: 1px;
+    }
+  }
+  &__right {
+    a {
+      padding: 0.75rem 1.6rem;
+      background-color: #fff3e5;
+      border: 1px solid transparent;
+      font-size: 1rem;
+      border-radius: 0.3rem;
+      font-family: $primaryFont500;
+      color: #262626;
+      transition: 0.5s ease;
+      &:hover{
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.footer {
+  .footertop {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    padding: 3.25rem 0;
+    color: #555;
+    font-family: $primaryFont500;
+
+    ul {
+      padding: 0;
+      display: flex;
+      align-items: left;
+      flex-direction: column;
+      li {
+        padding: 0.255rem 0;
+        font-family: $primaryFontregular;
+        color: #bbbbbb;
+        font-size: 0.9rem;
+        cursor: pointer;
+      }
+    }
+    &__parts {
+      &--title {
+        font-size: 0.875em;
+        letter-spacing: 0.0625em;
+      }
+    }
+  }
+  .footermiddle {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.1rem 0;
+    .mobilplatform__links {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      width: 50%;
+      * {
+        padding-right: 5px;
+        padding-left: 0 !important;
+        width: 25%;
+        cursor: pointer;
+      }
+    }
+    .icons{
+      i{
+        padding: 10px 12px;
+        border: 1px solid $primarycolor;
+        margin: 0 .725rem;
+        color: $primarycolor;
+        transition: 0.5s ease;
+        &:hover{
+          background-color: $primarycolor;
+          color: #f7f7f7;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .footer__bottom{
+    display: flex;
+    padding: 1.25rem;
+    &--logo{
+      width: 15vw;
+    }
+    &--text{
+      width: calc(100% - 15vw);
+      color: $textcolor;
+      font-family: $primaryFontregular;
+      font-size: 0.9rem;
+      line-height: 1.25rem;
+    }
+  }
 }

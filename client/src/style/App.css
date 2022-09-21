@@ -23,6 +23,16 @@ body a {
   text-decoration: none;
 }
 
+hr {
+  height: 1px !important;
+  background-color: #555 !important;
+  border: none !important;
+}
+
+li {
+  list-style-type: none;
+}
+
 .App {
   font-family: SF Pro Display Medium;
 }
@@ -541,4 +551,144 @@ form .searchIcon {
 }
 .map__section--info a:hover {
   background-color: #bd7502;
+}
+
+.mobil {
+  margin: 8.25rem 0;
+  display: flex;
+  align-items: center;
+  background-color: #ff9f00;
+  height: 29rem;
+  padding: 0 5rem;
+}
+
+.mobilplatform * {
+  padding-bottom: 1rem;
+}
+.mobilplatform__logo {
+  margin-left: -4rem;
+  padding-bottom: 0;
+}
+.mobilplatform__title {
+  margin-top: -2.5rem;
+  font-size: 2.75rem;
+  font-family: SF Pro Display Heavy;
+  color: #fff;
+}
+.mobilplatform__text {
+  color: #f2f2f2;
+  letter-spacing: -0.025rem;
+}
+.mobilplatform__links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mobilplatform__links * {
+  padding: 5px;
+  width: 30%;
+  cursor: pointer;
+}
+
+.bulten {
+  background-color: #ff9f00;
+  color: #fff;
+}
+.bulten .bultencontent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.25rem 0;
+}
+.bulten__left {
+  width: 35rem;
+}
+.bulten__left--title {
+  font-size: 2rem;
+  font-family: SF Pro Display SemiBold;
+  margin-bottom: 0.5em;
+}
+.bulten__left--text {
+  letter-spacing: 1px;
+}
+.bulten__right a {
+  padding: 0.75rem 1.6rem;
+  background-color: #fff3e5;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  font-family: SF Pro Display SemiBold;
+  color: #262626;
+  transition: 0.5s ease;
+}
+.bulten__right a:hover {
+  background-color: #fff;
+}
+
+.footer .footertop {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  padding: 3.25rem 0;
+  color: #555;
+  font-family: SF Pro Display SemiBold;
+}
+.footer .footertop ul {
+  padding: 0;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+.footer .footertop ul li {
+  padding: 0.255rem 0;
+  font-family: SF Pro Regular;
+  color: #bbbbbb;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.footer .footertop__parts--title {
+  font-size: 0.875em;
+  letter-spacing: 0.0625em;
+}
+.footer .footermiddle {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.1rem 0;
+}
+.footer .footermiddle .mobilplatform__links {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 50%;
+}
+.footer .footermiddle .mobilplatform__links * {
+  padding-right: 5px;
+  padding-left: 0 !important;
+  width: 25%;
+  cursor: pointer;
+}
+.footer .footermiddle .icons i {
+  padding: 10px 12px;
+  border: 1px solid #ff9f00;
+  margin: 0 0.725rem;
+  color: #ff9f00;
+  transition: 0.5s ease;
+}
+.footer .footermiddle .icons i:hover {
+  background-color: #ff9f00;
+  color: #f7f7f7;
+  cursor: pointer;
+}
+.footer .footer__bottom {
+  display: flex;
+  padding: 1.25rem;
+}
+.footer .footer__bottom--logo {
+  width: 15vw;
+}
+.footer .footer__bottom--text {
+  width: calc(100% - 15vw);
+  color: #969696;
+  font-family: SF Pro Regular;
+  font-size: 0.9rem;
+  line-height: 1.25rem;
 }/*# sourceMappingURL=App.css.map */
