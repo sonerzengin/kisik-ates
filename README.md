@@ -1,25 +1,36 @@
+### Bu proje kisikates.com websitesinin klonudur.
+
+Projede;
+*Apollo Graphql
+*TypeScript
+*Router Dom
+*React Bootstrap
+*ChakraUI
+*Prettier
+
+kullanılmıştır.
+
 
 ## Repoyu localde çalıştırmak için !
 
-İki temel dosya var:
 
 - `server`:  GraphQL server.
 - `client`:  Frontend React application.
 
-Başlamak için:
+Apollo Server'ı başlatmak için;
 
-1. `server` dosyasına git.
+1. `server` klasöründe,
 1. `npm install` komutunu çalıştır.
 1. `npm start` komutunu çalıştır.
 
-Bu işlemler GraphQL API serverını başlatacak.
 
-Başka bir terminal penceresinde,
 
-1. `client` dosyasına git.
+React projesini başlatmak için;
+
+1. `client` klasöründe,
 1. `npm install` komutunu çalıştır.
 1. `npm start` komutunu çalıştır.
 
-`localhost:3000` React uygulaması çalışacak
+
 
 
