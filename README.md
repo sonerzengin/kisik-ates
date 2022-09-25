@@ -5,6 +5,7 @@ Projede;
 * TypeScript
 * Router Dom
 * React Bootstrap
+* SASS
 * ChakraUI
 * Prettier
 
