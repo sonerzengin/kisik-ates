@@ -48,7 +48,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <hr></hr>
+        <hr/>
         <div className="footermiddle">
           <div className="mobilplatform__links">
             <img src={appstore} alt="aaa" />

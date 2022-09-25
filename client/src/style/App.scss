@@ -29,6 +29,22 @@ body {
     text-decoration: none;
   }
 }
+.d-none{
+  display: none;
+}
+.d-block{
+  display: block;
+}
+.d-sm-none{
+  @media only screen and (max-width: 767.99px){
+    display: none;
+  }
+}
+.d-sm-block{
+  @media only screen and (max-width: 767.99px){
+    display: block;
+  }
+}
 hr {
   height: 1px !important;
   background-color: #555 !important;
@@ -53,6 +69,11 @@ li {
 .container {
   padding-right: 7.5rem !important;
   padding-left: 7.5rem !important;
+  @media only screen and (max-width: 767.99px){
+    padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+  }
+  
 }
 .sticky {
   position: fixed;
@@ -60,13 +81,25 @@ li {
   width: 100%;
 }
 .header {
-  height: 85px;
+  height: 5rem;
   display: grid;
   grid-template-columns: 0.85fr 2fr 1fr;
   align-items: center;
+  @media only screen and (max-width: 767.99px){
+    display: flex;
+    justify-content: space-between;
+    height: 7rem;
+    flex-wrap:wrap ;
+  }
 }
 .logo {
   width: 140px;
+  @media only screen and (max-width: 767.99px){
+    margin: 0;
+    padding: 0;
+    min-width: 30%;
+    max-width: 75%;
+  }
 }
 form {
   width: 100%;
@@ -79,7 +112,7 @@ form {
   border-radius: 5px;
 
   .searchbar {
-    width: 260px;
+    width: 80%;
     outline: none;
     border: none;
     margin-left: 10px;
@@ -92,11 +125,25 @@ form {
       color: $textcolor;
       font-size: 12px;
     }
+    @media only screen and (max-width: 767.99px){
+      padding: 10px 5px;
+      max-width: 100%;
+    }
+    @media only screen and (max-width: 575.99px){
+      width: 85%;
+    }
+    
   }
   .searchIcon {
     width: 13px;
     padding-right: 10px;
     color: $textcolor;
+    
+  }
+  @media only screen and (max-width: 767.99px){
+    margin-left: 0;
+    width: 80vw;
+    
   }
 }
 .signup {
@@ -117,8 +164,17 @@ form {
     }
     i {
       padding-right: 8px;
+      @media only screen and (max-width: 767.99px){
+        padding-right:5px ;
+        
+      }
+    }
+    @media only screen and (max-width: 575.99px){
+      font-size: .825rem;
+      padding: 0 18px;
     }
   }
+  
 }
 .navbar {
   height: 75px;
@@ -129,7 +185,7 @@ form {
   width: 100%;
   color: #ffe2b3;
   font-size: 1.1rem;
-
+  
   .container {
     display: flex;
     justify-content: space-between;
@@ -155,6 +211,13 @@ form {
       color: #fff;
       cursor: pointer;
     }
+  }
+  @media only screen and (max-width: 767.99px){
+    height: 3px;
+    .container{
+      display: none;
+    }
+    
   }
 }
 .intro {
@@ -185,6 +248,20 @@ form {
     margin-bottom: -131px;
     padding-left: 40px;
     padding-right: 40px;
+  }
+  @media only screen and (max-width: 767.99px){
+    justify-content: flex-start;
+    margin-bottom: 5em;
+    *{
+      padding-bottom: 1rem;
+    }
+    &__title{
+      font-size: 2.475rem;
+    }
+    &__subtitle{
+      padding: 0 4.5rem;
+      font-size: 1.125em;
+    }
   }
 }
 .collections {
@@ -226,6 +303,10 @@ form {
   &__hr {
     margin-top: 6rem;
   }
+  @media only screen and (max-width: 767.99px){
+    padding-top: 0;
+    
+  }
 }
 
 //KISIK ATES'TEN OZEL SECIMLER
@@ -241,7 +322,7 @@ form {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media screen and (max-width: 768.99px) {
+  @media screen and (max-width: 767.99px) {
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -285,7 +366,11 @@ form {
         padding: 0 10px;
       }
     }
+    @media screen and (max-width: 767.99px) {
+      height: 22em;
+    }
   }
+  
 }
 
 //SEFLERLE ILETISIME GEC
@@ -327,18 +412,25 @@ form {
     }
   }
 }
+.tarifler{
+  @media screen and (max-width: 767.99px) {
+    margin-top: 5em;
+    font-size: 1.1rem;
+  }
+}
 .chiefs {
   display: grid;
   grid-template-columns: repeat(3, 0.5fr);
   grid-template-rows: repeat(2, 2fr);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+  
 
   @media screen and (max-width: 992px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media screen and (max-width: 768.99px) {
+  @media screen and (max-width: 767.99px) {
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -394,7 +486,7 @@ form {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media screen and (max-width: 768.99px) {
+  @media screen and (max-width: 767.99px) {
     grid-template-columns: repeat(1, 1fr);
   }
   &__recipes {
@@ -404,6 +496,7 @@ form {
     &:hover {
       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     }
+    
   }
   &__head {
     display: flex;
@@ -480,6 +573,7 @@ form {
       }
     }
   }
+  
 }
 
 .recipes__footer {
@@ -537,6 +631,22 @@ form {
       }
     }
   }
+  @media screen and (max-width: 767.99px) {
+    display: flex;
+    flex-direction: column;
+    padding: .25rem 0;
+    h1{
+      font-size: 1.75rem;
+    }
+    p{
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+    a{
+      padding: 0.8rem 8.5rem;
+      text-align: center;
+    }
+  }
 }
 .mobil {
   margin: 8.25rem 0;
@@ -545,6 +655,22 @@ form {
   background-color: $primarycolor;
   height: 29rem;
   padding: 0 5rem;
+  @media screen and (max-width: 767.99px) {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 18rem 1rem 2rem 1rem;
+  }
+}
+.mobilgorsel{
+  display: flex;
+  justify-content: center;
+  
+  img{
+  @media screen and (max-width: 767.99px) {
+    width: 100%;
+    
+  }
+}
 }
 .mobilplatform {
   * {
@@ -576,6 +702,30 @@ form {
       cursor: pointer;
     }
   }
+  @media screen and (max-width: 767.99px) {
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+   &__logo{
+    display: none;
+   }
+   &__title {
+    margin-top: 0;
+    font-size: 1.850rem;
+   }
+   &__links{
+    flex-wrap: wrap;
+    justify-content: center;
+    *{
+      width: 40%;
+    }
+   }
+    
+  }
 }
 
 .bulten {
@@ -586,6 +736,11 @@ form {
     align-items: center;
     justify-content: space-between;
     padding: 2.25rem 0;
+    @media screen and (max-width: 767.99px) {
+      flex-direction: column;
+      text-align: center;
+   
+    }
   }
   &__left {
     width: 35rem;
@@ -597,6 +752,17 @@ form {
     &--text {
       letter-spacing: 1px;
     }
+    @media screen and (max-width: 767.99px) {
+      &--title{
+        font-size: 1.5rem;
+        padding: 0 2.5rem ;
+      }
+      &--text {
+        padding: 0 2rem ;
+      }
+      
+    }
+    
   }
   &__right {
     a {
@@ -611,8 +777,17 @@ form {
       &:hover{
         background-color: #fff;
       }
+      
+    }
+    @media screen and (max-width: 767.99px) {
+     margin-top: 2rem;
+     display: block;   
+     a{
+      padding: 0.75rem 9rem;
+     }
     }
   }
+
 }
 
 .footer {
@@ -642,6 +817,9 @@ form {
         letter-spacing: 0.0625em;
       }
     }
+    @media screen and (max-width: 767.99px){
+      grid-template-columns: repeat(2, 2fr);
+    }
   }
   .footermiddle {
     display: flex;
@@ -657,6 +835,18 @@ form {
         padding-left: 0 !important;
         width: 25%;
         cursor: pointer;
+        
+      }
+      @media screen and (max-width: 767.99px){
+        margin-top: 1rem;
+        width: 100%;
+        align-items: flex-start;
+        padding-left: 0.75rem;
+      *{
+          width: 35%;
+          padding-right: 1rem;
+          
+        }
       }
     }
     .icons{
@@ -673,6 +863,9 @@ form {
         }
       }
     }
+    @media screen and (max-width: 767.99px) {
+      flex-direction: column-reverse;
+    }
   }
   .footer__bottom{
     display: flex;
@@ -686,6 +879,16 @@ form {
       font-family: $primaryFontregular;
       font-size: 0.9rem;
       line-height: 1.25rem;
+    }
+    @media screen and (max-width: 767.99px) {
+      flex-direction: column;
+      padding: .25rem;
+      &--logo{
+        width: 45vw;
+      }
+      &--text{
+        width: 100%
+      }
     }
   }
 }

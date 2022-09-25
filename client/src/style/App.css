@@ -23,6 +23,26 @@ body a {
   text-decoration: none;
 }
 
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+@media only screen and (max-width: 767.99px) {
+  .d-sm-none {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767.99px) {
+  .d-sm-block {
+    display: block;
+  }
+}
+
 hr {
   height: 1px !important;
   background-color: #555 !important;
@@ -53,6 +73,12 @@ li {
   padding-right: 7.5rem !important;
   padding-left: 7.5rem !important;
 }
+@media only screen and (max-width: 767.99px) {
+  .container {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+  }
+}
 
 .sticky {
   position: fixed;
@@ -61,14 +87,30 @@ li {
 }
 
 .header {
-  height: 85px;
+  height: 5rem;
   display: grid;
   grid-template-columns: 0.85fr 2fr 1fr;
   align-items: center;
 }
+@media only screen and (max-width: 767.99px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    height: 7rem;
+    flex-wrap: wrap;
+  }
+}
 
 .logo {
   width: 140px;
+}
+@media only screen and (max-width: 767.99px) {
+  .logo {
+    margin: 0;
+    padding: 0;
+    min-width: 30%;
+    max-width: 75%;
+  }
 }
 
 form {
@@ -82,7 +124,7 @@ form {
   border-radius: 5px;
 }
 form .searchbar {
-  width: 260px;
+  width: 80%;
   outline: none;
   border: none;
   margin-left: 10px;
@@ -104,10 +146,27 @@ form .searchbar::placeholder {
   color: #969696;
   font-size: 12px;
 }
+@media only screen and (max-width: 767.99px) {
+  form .searchbar {
+    padding: 10px 5px;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 575.99px) {
+  form .searchbar {
+    width: 85%;
+  }
+}
 form .searchIcon {
   width: 13px;
   padding-right: 10px;
   color: #969696;
+}
+@media only screen and (max-width: 767.99px) {
+  form {
+    margin-left: 0;
+    width: 80vw;
+  }
 }
 
 .signup {
@@ -129,6 +188,17 @@ form .searchIcon {
 }
 .signup div i {
   padding-right: 8px;
+}
+@media only screen and (max-width: 767.99px) {
+  .signup div i {
+    padding-right: 5px;
+  }
+}
+@media only screen and (max-width: 575.99px) {
+  .signup div {
+    font-size: 0.825rem;
+    padding: 0 18px;
+  }
 }
 
 .navbar {
@@ -165,6 +235,14 @@ form .searchIcon {
   color: #fff;
   cursor: pointer;
 }
+@media only screen and (max-width: 767.99px) {
+  .navbar {
+    height: 3px;
+  }
+  .navbar .container {
+    display: none;
+  }
+}
 
 .intro {
   height: 600px;
@@ -194,6 +272,22 @@ form .searchIcon {
   margin-bottom: -131px;
   padding-left: 40px;
   padding-right: 40px;
+}
+@media only screen and (max-width: 767.99px) {
+  .intro {
+    justify-content: flex-start;
+    margin-bottom: 5em;
+  }
+  .intro * {
+    padding-bottom: 1rem;
+  }
+  .intro__title {
+    font-size: 2.475rem;
+  }
+  .intro__subtitle {
+    padding: 0 4.5rem;
+    font-size: 1.125em;
+  }
 }
 
 .collections {
@@ -237,6 +331,11 @@ form .searchIcon {
 .collections__hr {
   margin-top: 6rem;
 }
+@media only screen and (max-width: 767.99px) {
+  .collections {
+    padding-top: 0;
+  }
+}
 
 .collectioncard {
   display: grid;
@@ -250,7 +349,7 @@ form .searchIcon {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 768.99px) {
+@media screen and (max-width: 767.99px) {
   .collectioncard {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -300,6 +399,11 @@ form .searchIcon {
     padding: 0 10px;
   }
 }
+@media screen and (max-width: 767.99px) {
+  .collectioncard__card {
+    height: 22em;
+  }
+}
 
 .collections__chiefs {
   text-align: center;
@@ -341,6 +445,13 @@ form .searchIcon {
   background: #fff3e5;
 }
 
+@media screen and (max-width: 767.99px) {
+  .tarifler {
+    margin-top: 5em;
+    font-size: 1.1rem;
+  }
+}
+
 .chiefs {
   display: grid;
   grid-template-columns: repeat(3, 0.5fr);
@@ -353,7 +464,7 @@ form .searchIcon {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 768.99px) {
+@media screen and (max-width: 767.99px) {
   .chiefs {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -407,7 +518,7 @@ form .searchIcon {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 768.99px) {
+@media screen and (max-width: 767.99px) {
   .recipes {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -552,6 +663,24 @@ form .searchIcon {
 .map__section--info a:hover {
   background-color: #bd7502;
 }
+@media screen and (max-width: 767.99px) {
+  .map__section {
+    display: flex;
+    flex-direction: column;
+    padding: 0.25rem 0;
+  }
+  .map__section h1 {
+    font-size: 1.75rem;
+  }
+  .map__section p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .map__section a {
+    padding: 0.8rem 8.5rem;
+    text-align: center;
+  }
+}
 
 .mobil {
   margin: 8.25rem 0;
@@ -560,6 +689,23 @@ form .searchIcon {
   background-color: #ff9f00;
   height: 29rem;
   padding: 0 5rem;
+}
+@media screen and (max-width: 767.99px) {
+  .mobil {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 18rem 1rem 2rem 1rem;
+  }
+}
+
+.mobilgorsel {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 767.99px) {
+  .mobilgorsel img {
+    width: 100%;
+  }
 }
 
 .mobilplatform * {
@@ -589,6 +735,28 @@ form .searchIcon {
   width: 30%;
   cursor: pointer;
 }
+@media screen and (max-width: 767.99px) {
+  .mobilplatform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mobilplatform__logo {
+    display: none;
+  }
+  .mobilplatform__title {
+    margin-top: 0;
+    font-size: 1.85rem;
+  }
+  .mobilplatform__links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .mobilplatform__links * {
+    width: 40%;
+  }
+}
 
 .bulten {
   background-color: #ff9f00;
@@ -600,6 +768,12 @@ form .searchIcon {
   justify-content: space-between;
   padding: 2.25rem 0;
 }
+@media screen and (max-width: 767.99px) {
+  .bulten .bultencontent {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 .bulten__left {
   width: 35rem;
 }
@@ -610,6 +784,15 @@ form .searchIcon {
 }
 .bulten__left--text {
   letter-spacing: 1px;
+}
+@media screen and (max-width: 767.99px) {
+  .bulten__left--title {
+    font-size: 1.5rem;
+    padding: 0 2.5rem;
+  }
+  .bulten__left--text {
+    padding: 0 2rem;
+  }
 }
 .bulten__right a {
   padding: 0.75rem 1.6rem;
@@ -623,6 +806,15 @@ form .searchIcon {
 }
 .bulten__right a:hover {
   background-color: #fff;
+}
+@media screen and (max-width: 767.99px) {
+  .bulten__right {
+    margin-top: 2rem;
+    display: block;
+  }
+  .bulten__right a {
+    padding: 0.75rem 9rem;
+  }
 }
 
 .footer .footertop {
@@ -649,6 +841,11 @@ form .searchIcon {
   font-size: 0.875em;
   letter-spacing: 0.0625em;
 }
+@media screen and (max-width: 767.99px) {
+  .footer .footertop {
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
 .footer .footermiddle {
   display: flex;
   justify-content: space-between;
@@ -666,6 +863,18 @@ form .searchIcon {
   width: 25%;
   cursor: pointer;
 }
+@media screen and (max-width: 767.99px) {
+  .footer .footermiddle .mobilplatform__links {
+    margin-top: 1rem;
+    width: 100%;
+    align-items: flex-start;
+    padding-left: 0.75rem;
+  }
+  .footer .footermiddle .mobilplatform__links * {
+    width: 35%;
+    padding-right: 1rem;
+  }
+}
 .footer .footermiddle .icons i {
   padding: 10px 12px;
   border: 1px solid #ff9f00;
@@ -677,6 +886,11 @@ form .searchIcon {
   background-color: #ff9f00;
   color: #f7f7f7;
   cursor: pointer;
+}
+@media screen and (max-width: 767.99px) {
+  .footer .footermiddle {
+    flex-direction: column-reverse;
+  }
 }
 .footer .footer__bottom {
   display: flex;
@@ -691,4 +905,16 @@ form .searchIcon {
   font-family: SF Pro Regular;
   font-size: 0.9rem;
   line-height: 1.25rem;
+}
+@media screen and (max-width: 767.99px) {
+  .footer .footer__bottom {
+    flex-direction: column;
+    padding: 0.25rem;
+  }
+  .footer .footer__bottom--logo {
+    width: 45vw;
+  }
+  .footer .footer__bottom--text {
+    width: 100%;
+  }
 }/*# sourceMappingURL=App.css.map */

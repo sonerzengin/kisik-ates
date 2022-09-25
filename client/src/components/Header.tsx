@@ -7,12 +7,17 @@ function Header() {
     <div className="container header">
       <Logo />
 
-      <form>
+      <form className='d-sm-none'>
         <input placeholder="Arama Yap..." className="searchbar" />
         <SearchIcon className="searchIcon" />
       </form>
 
       <SignUP />
+    
+      <form className='d-none d-sm-block' >
+        <input placeholder="Arama Yap..." className="searchbar" />
+        <SearchIcon className="searchIcon" />
+      </form>
     </div>
   );
 }
