@@ -1,12 +1,12 @@
-###Bu proje kisikates.com websitesinin klonudur.
+### Bu proje, kisikates.com websitesinin klonudur.
 
 Projede;
-*Apollo Graphql
-*TypeScript
-*Router Dom
-*React Bootstrap
-*ChakraUI
-*Prettier
+* Apollo Graphql
+* TypeScript
+* Router Dom
+* React Bootstrap
+* ChakraUI
+* Prettier
 
 kullanılmıştır.
 
