@@ -1,4 +1,4 @@
-### Bu proje kisikates.com websitesinin klonudur.
+###Bu proje kisikates.com websitesinin klonudur.
 
 Projede;
 *Apollo Graphql
@@ -11,7 +11,7 @@ Projede;
 kullanılmıştır.
 
 
-## Repoyu localde çalıştırmak için !
+
 
 
 - `server`:  GraphQL server.
