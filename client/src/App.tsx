@@ -1,4 +1,4 @@
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Bulten from './components/Bulten';
 import Collections, { Chiefs, Recipes } from './components/Collections';
 import Footer from './components/Footer';

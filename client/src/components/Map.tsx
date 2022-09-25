@@ -10,7 +10,7 @@ function Map() {
             <p>Lezzet avcılarımız Türkiye’nin dört bir köşesini gezerek en lezzetli lokantalarını sizler için seçiyor ve Kısık Ateş mobil uygulaması ile kolay ulaşmanızı sağlıyor.</p>
             <a href='#'>Lezzet Avcılarını Keşfet</a>
         </div>
-        <div className="map__section--img d-sm-none">
+        <div className="map__section--img d-none d-md-block ">
             <img src="https://www.kisikates.com.tr/5432fd652ec385f4b347c7f178a85671.png" alt="" />
         </div>
     </div>

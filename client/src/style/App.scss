@@ -14,6 +14,8 @@
   font-family: SF Pro Display Medium;
   src: url(./font/SFProDisplay-Medium.ttf);
 }
+
+
 $primaryFontregular: SF Pro Regular;
 $primaryFont500: SF Pro Display SemiBold;
 $primaryFont400: SF Pro Display Medium;
@@ -29,22 +31,8 @@ body {
     text-decoration: none;
   }
 }
-.d-none{
-  display: none;
-}
-.d-block{
-  display: block;
-}
-.d-sm-none{
-  @media only screen and (max-width: 767.99px){
-    display: none;
-  }
-}
-.d-sm-block{
-  @media only screen and (max-width: 767.99px){
-    display: block;
-  }
-}
+
+
 hr {
   height: 1px !important;
   background-color: #555 !important;
@@ -66,15 +54,7 @@ li {
   font-size: 36px;
   text-align: center;
 }
-.container {
-  padding-right: 7.5rem !important;
-  padding-left: 7.5rem !important;
-  @media only screen and (max-width: 767.99px){
-    padding-right: 1.5rem !important;
-  padding-left: 1.5rem !important;
-  }
-  
-}
+
 .sticky {
   position: fixed;
   top: 0;
@@ -597,9 +577,10 @@ form {
 
 .map__section {
   display: grid;
-  grid-template-columns: 2fr 4fr;
+  grid-template-columns: 2fr 3fr;
   padding: 6.25rem 0;
-  column-gap: 10px;
+  column-gap: 2rem;
+  align-items: center;
   &--info {
     display: flex;
     flex-direction: column;
@@ -611,6 +592,8 @@ form {
       padding-top: 0;
       color: #262626;
       letter-spacing: 0.1rem;
+      font-size: 2.25rem;
+      font-family: $primaryFont500;
     }
     p {
       color: $textcolor;
@@ -630,11 +613,19 @@ form {
         background-color: #bd7502;
       }
     }
+    @media screen and (max-width: 767.99px){
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &--img{
+   
   }
   @media screen and (max-width: 767.99px) {
     display: flex;
     flex-direction: column;
     padding: .25rem 0;
+    
     h1{
       font-size: 1.75rem;
     }
@@ -649,30 +640,43 @@ form {
   }
 }
 .mobil {
-  margin: 8.25rem 0;
-  display: flex;
-  align-items: center;
   background-color: $primarycolor;
-  height: 29rem;
-  padding: 0 5rem;
-  @media screen and (max-width: 767.99px) {
-    flex-direction: column-reverse;
-    text-align: center;
-    padding: 18rem 1rem 2rem 1rem;
+  height: 27rem;
+  padding: 0;
+  margin: 8rem 0;
+
+  .mobil_mobil{
+    display: flex;
+    @media screen and (max-width: 767.99px) {
+      flex-direction: column-reverse;
+      
+    }
+  }
+  @media screen and (max-width: 767.99px){
+    height: 40rem;
   }
 }
 .mobilgorsel{
   display: flex;
   justify-content: center;
-  
+  margin-top: -5rem;
   img{
   @media screen and (max-width: 767.99px) {
-    width: 100%;
-    
+    width: 50vw;
+    margin-top: 0;
   }
 }
 }
 .mobilplatform {
+  
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4rem;
+  margin-top: -10rem;
+  
+  
   * {
     padding-bottom: 1rem;
   }
@@ -709,7 +713,8 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    
+    text-align: center;
+    margin-top: 0;
    &__logo{
     display: none;
    }
@@ -731,6 +736,7 @@ form {
 .bulten {
   background-color: $primarycolor;
   color: #fff;
+  
   .bultencontent {
     display: flex;
     align-items: center;
@@ -753,12 +759,13 @@ form {
       letter-spacing: 1px;
     }
     @media screen and (max-width: 767.99px) {
+      text-align: center;
       &--title{
         font-size: 1.5rem;
-        padding: 0 2.5rem ;
+        width:80% ;
       }
       &--text {
-        padding: 0 2rem ;
+        width:80% ;
       }
       
     }

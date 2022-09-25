@@ -8,8 +8,9 @@ import mobil from '../assets/mobil.png';
 function Mobil() {
   return (
     <div className="mobil">
-      <div className="mobilplatform">
-        <div className="container">
+      <div className="container mobil_mobil">
+        <div className="mobilplatform">
+        
           <div className="mobilplatform__logo">
             <img src={orangelogo} alt="" />
           </div>
@@ -24,9 +25,10 @@ function Mobil() {
             <img src={huawei} alt="aaa" />
           </div>
         </div>
-      </div>
-      <div className="mobilgorsel">
-        <img src={mobil} alt="" />
+      
+        <div className="mobilgorsel">
+          <img src={mobil} alt="" />
+        </div>
       </div>
     </div>
   );
