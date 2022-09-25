@@ -61,7 +61,7 @@ li {
   grid-template-columns: 0.85fr 2fr 1fr;
   align-items: center;
 }
-@media only screen and (max-width: 767.99px) {
+@media only screen and (max-width: 575.99px) {
   .header {
     display: flex;
     justify-content: space-between;
@@ -117,13 +117,13 @@ form .searchbar::placeholder {
 }
 @media only screen and (max-width: 767.99px) {
   form .searchbar {
-    padding: 10px 5px;
+    padding: 8px 5px;
     max-width: 100%;
   }
 }
 @media only screen and (max-width: 575.99px) {
   form .searchbar {
-    width: 85%;
+    width: 95%;
   }
 }
 form .searchIcon {
@@ -134,7 +134,7 @@ form .searchIcon {
 @media only screen and (max-width: 767.99px) {
   form {
     margin-left: 0;
-    width: 80vw;
+    width: 90vw;
   }
 }
 
@@ -766,6 +766,8 @@ form .searchIcon {
   .bulten .bultencontent {
     flex-direction: column;
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 }
 .bulten__left {
@@ -785,10 +787,10 @@ form .searchIcon {
   }
   .bulten__left--title {
     font-size: 1.5rem;
-    width: 80%;
+    padding: 0 1.25rem;
   }
   .bulten__left--text {
-    width: 80%;
+    padding: 0 1.25rem;
   }
 }
 .bulten__right a {

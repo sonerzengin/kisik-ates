@@ -59,7 +59,7 @@ function Collections() {
   const { loading, error, data } = useQuery<SecimlerData>(GET_COLLECTIONS, { pollInterval: 500 });
 
   if (loading) return <div className='loading'>Yükleniyor</div>;
-  if (error) return <div className='error'>Özel Seçimler yüklenemedi.<br/>Lütfen Apollo Server'ı 4000 portunda başlatın</div>;
+  if (error) return <div className='error'><b>Özel Seçimler</b> yüklenemedi.<br/>Lütfen Apollo Server'ı 4000 portunda başlatın</div>;
 
  
 
@@ -79,7 +79,7 @@ export function Recipes() {
   const { loading, error, data } = useQuery<YemeklerData>(GET_COLLECTIONS, { pollInterval: 500 });
 
   if (loading) return <div className='loading'>Yükleniyor</div>;
-  if (error) return <div className='error'>Yemekler yüklenemedi.<br/>Lütfen Apollo Server'ı 4000 portunda başlatın</div>;
+  if (error) return <div className='error'><b>Tarifler</b> yüklenemedi.<br/>Lütfen Apollo Server'ı 4000 portunda başlatın</div>;
 
  
 
@@ -98,7 +98,7 @@ export function Chiefs() {
   const { loading, error, data } = useQuery<YemeklerData>(GET_COLLECTIONS, { pollInterval: 500 });
 
   if (loading) return <div className='loading'>Yükleniyor</div>;
-  if (error) return <div className='error'>Şefler yüklenemedi.<br/>Lütfen Apollo Server'ı 4000 portunda başlatın</div>;
+  if (error) return <div className='error'><b>Şefler</b> yüklenemedi.<br/>Lütfen Apollo Server'ı 4000 portunda başlatın</div>;
 
  
 
